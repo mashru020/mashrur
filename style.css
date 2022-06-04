@@ -29,6 +29,7 @@ section:nth-child(even){
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+	z-index: 2;
 }
 .header--top, .header--bottom {
     width: 100%;
