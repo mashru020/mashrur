@@ -67,7 +67,7 @@ section:nth-child(even){
 .label__pagination h3{
  	font-family: Metropolis-b;
  	font-size: 28px;
- 	margin-bottom: 0px !important;
+ 	margin-bottom: 0px;
  	line-height: 28px;
 }
 .label__pagination h5{
@@ -75,7 +75,7 @@ section:nth-child(even){
  	font-size: 14px;
  	padding-left: 23px;
  	line-height: 14px;
- 	color: #fff !important;
+ 	color: #fff;
 }
 .topbar{
 	width: 100%;
@@ -96,25 +96,25 @@ nav{
 	left: 60px;
 }
 .navbar{
-	padding: 0px !important;
+	padding: 0px;
 	align-items: baseline;
-	justify-content: flex-start !important;
+	justify-content: flex-start;
 }
 #navbar li, button {
     display: inline-block;
-    background-color: transparent !important;
-    box-shadow: 0px 0px transparent !important;
-    border: 0px solid transparent !important;
-    margin: 0px !important;
-    padding: 0 !important;
+    background-color: transparent;
+    box-shadow: 0px 0px transparent;
+    border: 0px solid transparent;
+    margin: 0px;
+    padding: 0;
     color:#ffffff;
 }
 nav button{
-	padding: 10px !important;
+	padding: 10px;
 	background-color: transparent;
 	border: 0;
 	position: absolute;
-	outline: 0 !important;
+	outline: 0;
 	z-index: 2;
 	cursor:pointer;
 	left: -10px;
@@ -191,19 +191,19 @@ nav button:hover .menu-btn::after {
 }
 .navitem li a{
 	display: block;
-	padding:15px !important; 
+	padding:15px; 
 	font-family: CallingCode-reg;
 	font-size: 28px;
 	text-transform: uppercase;
-	color: #ffffff !important;
+	color: #ffffff;
 	text-decoration: none;	
 }
 #navbar li a:hover{
-	color: #07335d !important;
+	color: #07335d;
 	background-color: rgba(255,218,101,.9);
 }
 #navbar li a.active{
-	color: #f15850 !important;
+	color: #f15850;
 }
 .language{
 	position: absolute;
@@ -225,12 +225,12 @@ nav button:hover .menu-btn::after {
 	background-color: #ffdb66;
 }
 .language a.active{
-	color: #07335d !important;
+	color: #07335d;
 	background-color: #ffdb66;
 }
 #fv-dots {
-    left: 0% !important;
-    padding-left: 130px !important;
+    left: 0%;
+    padding-left: 130px;
 }
 #fv-dots ul li a span{
 	display: inline-block;
@@ -238,14 +238,14 @@ nav button:hover .menu-btn::after {
 	width: 9px;
 	border:1px solid #ffffff;
 	background-color: transparent;
-	transition: none !important;
+	transition: none;
 }
 #fv-dots ul li a span:hover{
 	background-color: #ffffff;
 }
 #fv-dots ul a.active span{
 	background-color: #ffffff;
-	transform: rotate(0deg) !important;
+	transform: rotate(0deg);
 	height: 9px;
 	width: 9px;
 }
@@ -265,7 +265,7 @@ nav button:hover .menu-btn::after {
 .pagination h3{
  	font-family: Metropolis-b;
  	font-size: 28px;
- 	margin-bottom: 0px !important;
+ 	margin-bottom: 0px;
  	line-height: 28px;
 }
 .pagination h5{
@@ -273,7 +273,7 @@ nav button:hover .menu-btn::after {
  	font-size: 14px;
  	padding-left: 23px;
  	line-height: 14px;
- 	color: #fff !important;
+ 	color: #fff;
 }
 .label__tag{
 	left: 60px;
@@ -283,7 +283,7 @@ nav button:hover .menu-btn::after {
 	z-index: 100;
 }
 .label__tag p{
-	margin-bottom: 0px !important;
+	margin-bottom: 0px;
 }
 .section {
 	width: 100%;
