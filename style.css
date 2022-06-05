@@ -49,6 +49,7 @@ section:nth-child(even){
 	font-family: CallingCode-reg;
 	font-size: 16px;
 	text-transform: lowercase;
+	transform: translate(74px,130px);
 }
 .label__section p{
 	vertical-align: middle;
