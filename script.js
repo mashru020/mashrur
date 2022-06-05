@@ -7,17 +7,18 @@
 });
 
 // seltect elements
+let navButton = document.querySelector('.nav__btn');
+const navBar = document.querySelector('.nav__wrapper');
 let sectionLabel = document.querySelector('.label__section p');
 let paginationLabel = document.querySelector('.label__pagination h3');
 console.log(sectionLabel);
 let section =document.querySelector('.section.active');
-let sectionName = document.querySelector('.section.active').id;
-console.log(sectionName);
-let className= section.classList[1];
-console.log(className);
-let classNameLength = className.length;
-console.log(classNameLength);
-let sectionNumber = className.slice(classNameLength - 1);
-console.log(sectionNumber);
-sectionLabel.textContent = sectionName;
-paginationLabel.textContent = sectionNumber;
+let sectionId = document.querySelector('.section.active').id;
+
+
+console.log(navButton);
+navButton.addEventListener('click',function(){
+	navBar.classList.toggle('hide');
+	navBar.classList.toggle('show');
+});
+

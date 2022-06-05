@@ -135,6 +135,7 @@ nav button:hover .menu-btn::after {
 .nav__wrapper {
 	height: 100%;
 	width: 100%;
+	transition: all .3s ease;
 }
 .nav__wrapper.show{
 	transform: scale(1);
@@ -143,9 +144,8 @@ nav button:hover .menu-btn::after {
 }
 .nav__wrapper.hide{
 	transform: scale(0.01);
-	transform-origin: top left;
-	opacity: 1;
-	top:-60px;
+	opacity: 0;
+	transform-origin: 75px 75px;
 }
 .nav__links{
 	width: 	100%;
