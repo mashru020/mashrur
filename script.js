@@ -7,13 +7,12 @@
 });
 
 // seltect elements
-let navButton = document.querySelector('.nav__btn');
+const navButton = document.querySelector('.nav__btn');
 const navBar = document.querySelector('.nav__wrapper');
-let sectionLabel = document.querySelector('.label__section p');
-let paginationLabel = document.querySelector('.label__pagination h3');
-console.log(sectionLabel);
-let section =document.querySelector('.section.active');
-let sectionId = document.querySelector('.section.active').id;
+const sectionLabel = document.querySelector('.label__section p');
+const paginationLabel = document.querySelector('.label__pagination h3');
+const section =document.querySelector('.section.active');
+const sectionId = document.querySelector('.section.active').id;
 
 
 console.log(navButton);
