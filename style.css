@@ -106,36 +106,70 @@ section:nth-child(even){
 	z-index: 2;
 	cursor:pointer;
 	transform: translate(64px, 60px);
+	transition: all .2s ease;
+}
+.menu-inner{
+	background: #f25850;
+	height: 2px;
+	width: 15px;
+	display: block;
+	transition: all .2s ease;
+	transform: translateX(0px) rotate(0deg);
+	opacity: 1;
 }
 .menu-btn::before{
 	content: ".";
 	font-size: 0px;
 	display: block;
     width: 25px;
-    height: 6px;
-    border-top: 2px solid #ffffff;
-   	color: #ffffff;
+    height: 2px;
+   	background: #ffffff;
 	transition: all .2s ease;
+	position: absolute;
+	top:3px;
 }
 .menu-btn::after{
 	content: ".";
 	font-size: 0px;
 	display: block;
-    width: 15px;
-    border-top: 2px solid #ffffff;
-   	color: #ffffff;
+    width: 25px;
+    height: 2px;
+   	background: #ffffff;
 	transition: all .2s ease;
+	position: absolute;
+	bottom:3px;
 }
-nav button:hover .menu-btn::before {
+.nav__btn:hover .menu-inner {
+	width: 25px;
+	
+}
+.nav__btn:hover .menu-btn::before {
 	width: 15px;
 }
-nav button:hover .menu-btn::after {
+.nav__btn:hover .menu-btn::after {
+	width: 15px;
+}
+.nav__btn.open .menu-inner {
+	transform:  translate(70px, 0px) ;
 	width: 25px;
+	opacity: 0;
+}
+.nav__btn.open .menu-btn::before {
+	transform: translate(0px,12px) rotate(-45deg);
+	width: 25px;
+}
+.nav__btn.open .menu-btn::after {
+	transform: translate(0px,-2px) rotate(45deg);
+	width: 25px;
+}
+.nav__btn.open:hover .menu-btn::after,
+.nav__btn.open:hover .menu-btn::before {
+	background:#ffdb66;
 }
 .nav__wrapper {
 	height: 100%;
 	width: 100%;
-	transition: all .3s ease;
+	transition: all .2s ease;
 }
 .nav__wrapper.show{
 	transform: scale(1);
@@ -145,7 +179,8 @@ nav button:hover .menu-btn::after {
 .nav__wrapper.hide{
 	transform: scale(0.01);
 	opacity: 0;
-	transform-origin: 75px 75px;
+	transform-origin: 125px 35px;
+	transition-delay: 0s;
 }
 .nav__links{
 	width: 	100%;

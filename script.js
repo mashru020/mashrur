@@ -19,5 +19,6 @@ console.log(navButton);
 navButton.addEventListener('click',function(){
 	navBar.classList.toggle('hide');
 	navBar.classList.toggle('show');
+	navButton.classList.toggle('open');
 });
 
