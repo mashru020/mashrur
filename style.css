@@ -41,18 +41,23 @@ section:nth-child(even){
 .label__section{
     position: absolute;
     display: inline-block;
-	height: 20px;
+	height: 22px;
 	line-height: 20px;
-	padding: 0px 21px 2px 7px;
+	padding: 0px 21px 0px 7px;
 	background-color: #f25850;
 	color: #ffffff;
 	font-family: CallingCode-reg;
 	font-size: 16px;
 	text-transform: lowercase;
 	transform: translate(74px,130px);
+	overflow: hidden;
 }
 .label__section p{
 	vertical-align: middle;
+	width: 36px;
+	transform: translateY(0px);
+	transition: all .2s ease;
+	letter-spacing: 1px;
 }
 .label__pagination{
 	position: absolute;
@@ -66,12 +71,15 @@ section:nth-child(even){
 	padding: 20px;
 	flex-direction: column;
 	z-index: 100;
+	overflow: hidden;	
 }
 .label__pagination h3{
  	font-family: Metropolis-b;
  	font-size: 28px;
  	margin-bottom: 0px;
  	line-height: 28px;
+	transition: all .4s ease;
+	transform: translateY(0px);
 }
 .label__pagination h5{
  	font-family: Metropolis-r;
@@ -257,37 +265,7 @@ section:nth-child(even){
 	height: 9px;
 	width: 9px;
 }
-.label__pagination{
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	height: 80px;
-	width: 80px;
-	border-radius: 0px;
-	background-color: #f25850;
-	color: #ffffff;
-	padding: 20px;
-	flex-direction: column;
-	z-index: 100;
-	overflow: hidden;
-	
-	
-}
-.label__pagination h3{
- 	font-family: Metropolis-b;
- 	font-size: 28px;
- 	margin-bottom: 0px;
- 	line-height: 28px;
-	 transition: all .4s ease;
-	 transform: translateY(0px);
-}
-.label__pagination h5{
- 	font-family: Metropolis-r;
- 	font-size: 14px;
- 	padding-left: 23px;
- 	line-height: 14px;
- 	color: #fff;
-}
+
 .label__tag{
 	left: 60px;
 	bottom: 64px;
