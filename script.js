@@ -16,7 +16,12 @@ const paginationLabel = document.querySelector('.label__pagination h3');
 let section = document.querySelector('.section.active');
 const sectionId = document.querySelector('.section.active').id;
 
-
+const labelStyle = function (val) {
+	let x = `${val}px`;
+	console.log(x);
+	paginationLabel.style.transform = `translateY(${x})`;
+	
+}
 
 navButton.addEventListener('click',function(e){
 	navBar.classList.toggle('hide');
@@ -25,6 +30,7 @@ navButton.addEventListener('click',function(e){
 });
 document.addEventListener('click', function(e) {  
 	if (e.target.classList.contains('nav__link')) {
+		labelStyle(-50);
 		sectionLabelValue = e.target.innerHTML.toLowerCase();
 		sectionLabel.innerHTML = (sectionLabelValue) ;
 		navButton.classList.remove('open');
@@ -33,11 +39,17 @@ document.addEventListener('click', function(e) {
 
 
 		pagValue = e.target.hash;
-		paginationLabel.innerHTML = (0+pagValue[10]);
-		console.log(sectionLabelValue.length);
+		
+		// console.log(sectionLabelValue.length);
 		// console.log(sectionLabelValue);
-		console.log(sectionLabel);
+		// console.log(sectionLabel);
+		setTimeout(() => {
+			paginationLabel.innerHTML = (0+pagValue[10]);
+			labelStyle(0);
+		}, 1000);
+		
 	}
 		 
 }, false);
+
 

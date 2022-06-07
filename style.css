@@ -257,7 +257,7 @@ section:nth-child(even){
 	height: 9px;
 	width: 9px;
 }
-.pagination{
+.label__pagination{
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -269,14 +269,19 @@ section:nth-child(even){
 	padding: 20px;
 	flex-direction: column;
 	z-index: 100;
+	overflow: hidden;
+	
+	
 }
-.pagination h3{
+.label__pagination h3{
  	font-family: Metropolis-b;
  	font-size: 28px;
  	margin-bottom: 0px;
  	line-height: 28px;
+	 transition: all .4s ease;
+	 transform: translateY(0px);
 }
-.pagination h5{
+.label__pagination h5{
  	font-family: Metropolis-r;
  	font-size: 14px;
  	padding-left: 23px;
