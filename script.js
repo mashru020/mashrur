@@ -57,5 +57,7 @@ document.addEventListener('click', function(e) {
 	}
 		 
 }, false);
-
+document.addEventListener('wheel',function(e) {
+	console.log(e);
+});
 

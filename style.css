@@ -72,6 +72,7 @@ section:nth-child(even){
 	flex-direction: column;
 	z-index: 100;
 	overflow: hidden;	
+	letter-spacing: 1px;
 }
 .label__pagination h3{
  	font-family: Metropolis-b;
