@@ -58,6 +58,7 @@ section:nth-child(even){
 	transform: translateY(0px);
 	transition: width .6s ease, transform .2s ease;
 	letter-spacing: 1px;
+	white-space: nowrap;
 }
 .label__pagination{
 	position: absolute;

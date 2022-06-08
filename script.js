@@ -21,7 +21,7 @@ const labelStyle = function (val1, val2, val3) {
 	let x = `${val1}px`;
 	let y = `${val2}px`;
 	console.log(x , y);
-	sectionLabelText.style.width = `${val3*7}px`
+	sectionLabelText.style.width = `${val3*7.5}px`
 	paginationLabel.style.transform = `translateY(${x})`;
 	sectionLabelText.style.transform = `translateY(${y})`;
 
