@@ -24,23 +24,12 @@ section:nth-child(even){
 }
 
 /* ============================================    Header  ========================*/
-.header {
-    position:fixed;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-	z-index: 2;
-}
-.header--top, .header--bottom {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
+
 .label__section{
-    position: absolute;
+    position: fixed;
     display: inline-block;
+	top:0;
+	left: 0;
 	height: 22px;
 	line-height: 20px;
 	padding: 0px 21px 0px 7px;
@@ -51,6 +40,7 @@ section:nth-child(even){
 	text-transform: lowercase;
 	transform: translate(74px,130px);
 	overflow: hidden;
+	z-index: 100;
 }
 .label__section p{
 	vertical-align: middle;
@@ -61,7 +51,7 @@ section:nth-child(even){
 	white-space: nowrap;
 }
 .label__pagination{
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	right: 0;
 	height: 80px;
@@ -90,34 +80,23 @@ section:nth-child(even){
  	line-height: 14px;
  	color: #fff;
 }
-.topbar{
-	width: 100%;
-	position: fixed;
-	top:0;
-	left: 0;
-	padding: 50px 60px;
-	display: flex;
-	justify-content: center;
-	z-index: 100;
-}
 
-.nav{
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	z-index: 200;
-}
 
+
+/* ======================================================================== */
+/*                            nav button -> star                            */
+/* ======================================================================== */
 .nav__btn{
 	padding: 10px;
 	background-color: transparent;
 	border: 0;
 	position: absolute;
 	outline: 0;
-	z-index: 2;
+	z-index: 101;
 	cursor:pointer;
 	transform: translate(64px, 60px);
 	transition: all .5s ease;
+	position: fixed;
 }
 .menu-inner{
 	background: #f25850;
@@ -177,15 +156,23 @@ section:nth-child(even){
 .nav__btn.open:hover .menu-btn::before {
 	background:#ffdb66;
 }
+/* ======================================================================== */
+/*                            nav button -> end                             */
+/* ======================================================================== */
+.nav{
+	height: 0;
+}
 .nav__wrapper {
-	height: 100%;
-	width: 100%;
 	transition: all .5s ease;
 }
 .nav__wrapper.show{
+	height: 100vh;
+	width: 100%;
 	transform: scale(1);
 	opacity: 1;
 	top:0;
+	z-index: 100;
+	position: fixed;
 }
 .nav__wrapper.hide{
 	transform: scale(0.01);
@@ -224,11 +211,12 @@ section:nth-child(even){
 	color: #f15850;
 }
 .language{
-	position: absolute;
+	position: fixed;
 	top: 64px;
 	right: 60px;
 	font-family: Metropolis-sb;
 	font-size: 16px;
+	z-index: 100;
 }
 .language a{
 	display: inline-block;
@@ -274,6 +262,7 @@ section:nth-child(even){
 	color: #ffffff;
 	font-family: Metropolis-sb;
 	z-index: 100;
+	position: fixed;
 }
 .label__tag p{
 	margin-bottom: 0px;
@@ -282,4 +271,15 @@ section:nth-child(even){
 	width: 100%;
 	height: 100%;
 }
+.logo{
+	position: fixed;
+	top:50px;
+	left: calc(50% - 50px);
+	z-index: 100;
+	color: white;
+}
+
 /*=================  Home  ===================*/
+/* #fullpage {
+	display: none;
+} */
