@@ -35,7 +35,7 @@ section:nth-child(even){
 	padding: 0px 21px 0px 7px;
 	background-color: #f25850;
 	color: #ffffff;
-	font-family: CallingCode-reg;
+	font-family: 'Calling Code', sans-serif;
 	font-size: 16px;
 	text-transform: lowercase;
 	transform: translate(74px,130px);
@@ -47,7 +47,6 @@ section:nth-child(even){
 	width: 36px;
 	transform: translateY(0px);
 	transition: width .6s ease, transform .2s ease;
-	letter-spacing: 1px;
 	white-space: nowrap;
 }
 .label__pagination{
@@ -66,7 +65,8 @@ section:nth-child(even){
 	letter-spacing: 1px;
 }
 .label__pagination h3{
- 	font-family: Metropolis-b;
+	font-family: 'Metropolis', sans-serif;
+	font-weight: 700;
  	font-size: 28px;
  	margin-bottom: 0px;
  	line-height: 28px;
@@ -74,7 +74,8 @@ section:nth-child(even){
 	transform: translateY(0px);
 }
 .label__pagination h5{
- 	font-family: Metropolis-r;
+	font-family: 'Metropolis', sans-serif;
+	font-weight: 400;
  	font-size: 14px;
  	padding-left: 23px;
  	line-height: 14px;
@@ -197,7 +198,7 @@ section:nth-child(even){
 .nav__link{
 	display: block;
 	padding:10px; 
-	font-family: CallingCode-reg;
+	font-family: 'Calling Code', sans-serif;
 	font-size: 20px;
 	text-transform: uppercase;
 	color: #ffffff;
@@ -214,7 +215,8 @@ section:nth-child(even){
 	position: fixed;
 	top: 64px;
 	right: 60px;
-	font-family: Metropolis-sb;
+	font-family: 'Metropolis', sans-serif;
+	font-weight: 600;
 	font-size: 16px;
 	z-index: 100;
 }
@@ -260,7 +262,8 @@ section:nth-child(even){
 	left: 60px;
 	bottom: 64px;
 	color: #ffffff;
-	font-family: Metropolis-sb;
+	font-family: 'Metropolis', sans-serif;
+	font-weight: 600;
 	z-index: 100;
 	position: fixed;
 }
@@ -274,12 +277,7 @@ section:nth-child(even){
 .logo{
 	position: fixed;
 	top:50px;
-	left: calc(50% - 50px);
+	left: calc(50% - 59px);
 	z-index: 100;
 	color: white;
 }
-
-/*=================  Home  ===================*/
-/* #fullpage {
-	display: none;
-} */
