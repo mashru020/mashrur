@@ -6,9 +6,9 @@
 	scrollHorizontally: true,
 });
 
+
 // seltect elements
-let sectionLabelValue = "";
-let pagValue;
+
 const navButton = document.querySelector('.nav__btn');
 const navBar = document.querySelector('.nav__wrapper');
 const sectionLabel = document.querySelector('.label__section');
@@ -16,7 +16,18 @@ const sectionLabelText = document.querySelector('.label__section p');
 const paginationLabel = document.querySelector('.label__pagination h3');
 let section = document.querySelector('.section.active');
 const sectionId = document.querySelector('.section.active').id;
+const allSection = document.querySelectorAll('.section');
 
+// =======================================================variables
+let sectionLabelValue = "";
+let pagValue;
+const length = allSection.length;
+
+// functions 
+
+const getCurrentSection= () => {
+	return document.querySelector('.section.active');
+}
 const labelStyle = function (val1, val2, val3) {
 	let x = `${val1}px`;
 	let y = `${val2}px`;
@@ -28,9 +39,20 @@ const labelStyle = function (val1, val2, val3) {
 }
 
 
-// functions 
-
-// label change form nav item
+ 
+//check last and first section 
+const checkFirstLastSection = () => {
+	const currentSectionTest = getCurrentSection().id;
+	console.log(currentSectionTest);
+	const firstSection = allSection[0].id;
+	const lastSection = allSection[length - 1].id;
+	
+	if (firstSection == currentSectionTest || lastSection == currentSectionTest ){
+		return 0;
+	}
+	else return 1;
+}
+// ========================label change form nav item
 const changeLabelNav = (e) => {
 	sectionLabelValue = e.target.innerHTML.toLowerCase();
 	labelStyle(-50, -50,sectionLabelValue.length);
@@ -43,10 +65,9 @@ const changeLabelNav = (e) => {
 	}, 1000);
 }
 
-// label change with scroll
-const changeLabelScroll = (e) => {
-	const currentSection = document.querySelector('.section.active');
-	console.log(currentSection);
+// ==============  label change with scroll
+const changeLabel = (e) => {
+	const currentSection = getCurrentSection();
 	pagValue = currentSection.id[9];
 	
 	
@@ -60,23 +81,19 @@ const changeLabelScroll = (e) => {
 	}, 1000);
 }
 
-const changeLabelKey = (val) => {
-	if (val === 38 || val === 33) {
-		pagValue = `${Number(pagValue) + 1}`;
-	}
-	else if (val === 40 || val === 34) {
-		pagValue = `${Number(pagValue) - 1}`;
-	}
-	else {
-		console.log("press up or down arrow");
-	}
-}
 
+
+
+
+// EVENTS
 navButton.addEventListener('click',function(e){
 	navBar.classList.toggle('hide');
 	navBar.classList.toggle('show');
 	navButton.classList.toggle('open');
 });
+
+
+
 document.addEventListener('click', function(e) {  
 	if (e.target.classList.contains('nav__link')) {
 		
@@ -86,26 +103,20 @@ document.addEventListener('click', function(e) {
 		navBar.classList.toggle('show');
 		navBar.classList.toggle('hide');
 
-
 		changeLabelNav(e);
-		
-		// console.log(sectionLabelValue.length);
-		// console.log(sectionLabelValue);
-		// console.log(sectionLabelText);
-		
-		
 	}
 		 
 }, false);
 document.addEventListener('wheel',function(e) {
-	changeLabelScroll(e);
+	changeLabel(e);
+	console.log(checkFirstLastSection());
 });
 
-// document.addEventListener('keydown',function(e) {
-// 	console.log(e.target);
-// 	// e.preventDefault();
-// 	// changeLabelKey(e.keyCode);
+document.addEventListener('keydown',function(e) {
+	// console.log(e.target);
+	e.preventDefault();
+	changeLabel(e);
+	console.log(checkFirstLastSection());
 	
-	
-// });
+});
 
