@@ -11,6 +11,7 @@
 
 const navButton = document.querySelector('.nav__btn');
 const navBar = document.querySelector('.nav__wrapper');
+
 const sectionLabel = document.querySelector('.label__section');
 const sectionLabelText = document.querySelector('.label__section p');
 const paginationLabel = document.querySelector('.label__pagination h3');
@@ -52,25 +53,11 @@ const checkFirstLastSection = () => {
 	}
 	else return 1;
 }
-// ========================label change form nav item
-const changeLabelNav = (e) => {
-	sectionLabelValue = e.target.innerHTML.toLowerCase();
-	labelStyle(-50, -50,sectionLabelValue.length);
-	pagValue = e.target.hash;
 
-	setTimeout(() => {
-		sectionLabelText.innerHTML = (sectionLabelValue) ;
-		paginationLabel.innerHTML = (0+pagValue[10]);
-		labelStyle(0,0, sectionLabelValue.length);
-	}, 1000);
-}
-
-// ==============  label change with scroll
+// ==============  label change 
 const changeLabel = (e) => {
 	const currentSection = getCurrentSection();
 	pagValue = currentSection.id[9];
-	
-	
 	
 	sectionLabelValue = currentSection.classList[1];
 	labelStyle(-50, -50,sectionLabelValue.length);
@@ -86,6 +73,8 @@ const changeLabel = (e) => {
 
 
 // EVENTS
+
+// navigation event
 navButton.addEventListener('click',function(e){
 	navBar.classList.toggle('hide');
 	navBar.classList.toggle('show');
@@ -103,7 +92,8 @@ document.addEventListener('click', function(e) {
 		navBar.classList.toggle('show');
 		navBar.classList.toggle('hide');
 
-		changeLabelNav(e);
+		changeLabel(e);
+		console.log(getCurrentSection());
 	}
 		 
 }, false);
@@ -112,7 +102,7 @@ document.addEventListener('wheel',function(e) {
 	console.log(checkFirstLastSection());
 });
 
-document.addEventListener('keydown',function(e) {
+document.addEventListener('keyup',function(e) {
 	// console.log(e.target);
 	e.preventDefault();
 	changeLabel(e);
