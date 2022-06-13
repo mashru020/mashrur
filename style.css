@@ -13,7 +13,7 @@ body{
 	background-color: #7febb3;
 }
 
-section:nth-child(odd){
+/* section:nth-child(odd){
 	background-color: #192633;
 }
 section:nth-child(even){
@@ -21,8 +21,19 @@ section:nth-child(even){
 }
 .boxbg{
 	background-color: #192633;
+} */
+.section--1{
+	background-color: #ffdb66;
 }
-
+.section--2{
+	background-color: #66ffb3;
+}
+.section--3{
+	background-color: #f15850;
+}
+.section--4{
+	background-color: #5b9ef7;
+}
 /* ============================================    Header  ========================*/
 
 .label__section{

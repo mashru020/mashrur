@@ -2,6 +2,10 @@
 
   new fullpage('#fullpage', {
 	//options here
+	menu: '#menu-list',
+	anchors:['home', 'skills', 'services', 'profile'],
+	navigation: true,
+	navigationPosition: 'left',
 	autoScrolling:true,
 	scrollHorizontally: true
 });
