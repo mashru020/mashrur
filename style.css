@@ -22,7 +22,22 @@ section:nth-child(even){
 .boxbg{
 	background-color: #192633;
 }
-
+#section--1{
+	background: #131d27;
+}
+#section--2{
+	background: tomato;
+}
+#section--3{
+	background: lightseagreen
+}
+#section--4{
+	background: limegreen;
+}
+h1{
+	text-align: center;
+	color:purple;
+}
 /* ============================================    Header  ========================*/
 
 .label__section{
