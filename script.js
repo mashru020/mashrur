@@ -7,7 +7,8 @@
 	navigation: true,
 	navigationPosition: 'left',
 	autoScrolling:true,
-	scrollHorizontally: true
+	scrollHorizontally: true,
+	
 });
 
 // seltect elements

@@ -53,7 +53,7 @@ h1{
 	font-family: 'Calling Code', sans-serif;
 	font-size: 16px;
 	text-transform: lowercase;
-	transform: translate(74px,130px);
+	transform: translate(60px,130px);
 	overflow: hidden;
 	z-index: 100;
 }
@@ -99,9 +99,9 @@ h1{
 
 
 
-/* ======================================================================== */
-/*                            nav button -> star                            */
-/* ======================================================================== */
+/*======================================================================*/
+/*                          nav button->start                           */
+/*======================================================================*/
 .nav__btn{
 	padding: 10px;
 	background-color: transparent;
@@ -110,7 +110,7 @@ h1{
 	outline: 0;
 	z-index: 101;
 	cursor:pointer;
-	transform: translate(64px, 60px);
+	transform: translate(50px, 60px);
 	transition: all .5s ease;
 	position: fixed;
 }
@@ -172,9 +172,9 @@ h1{
 .nav__btn.open:hover .menu-btn::before {
 	background:#ffdb66;
 }
-/* ======================================================================== */
-/*                            nav button -> end                             */
-/* ======================================================================== */
+/*======================================================================*/
+/*                            nav button->end                           */
+/*======================================================================*/
 .nav{
 	height: 0;
 }
@@ -199,6 +199,7 @@ h1{
 	height: 100vh;
 	width: 100%;
 	transition: all .5s ease;
+	background: rgba(0,0,0,0.4);
 }
 .nav__links{
 	width: 	100%;
@@ -255,28 +256,42 @@ h1{
 	color: #07335d;
 	background-color: #ffdb66;
 }
-#fv-dots {
-    left: 0%;
-    padding-left: 130px;
+/* ======================  full Page navigation -> dots  ========================== */
+#fp-nav {
+    left: 60px !important;
 }
-#fv-dots ul li a span{
+#fp-nav ul li a span{
 	display: inline-block;
-	height: 9px;
-	width: 9px;
+	height: 8px;
+	width: 8px;
 	border:1px solid #ffffff;
-	background-color: transparent;
-	transition: none;
+	transition: all .3s ease;
+	border-radius: 0;
+	margin: 0;
 }
-#fv-dots ul li a span:hover{
+#fp-nav ul li a span:hover{
 	background-color: #ffffff;
-}
-#fv-dots ul a.active span{
-	background-color: #ffffff;
-	transform: rotate(0deg);
-	height: 9px;
-	width: 9px;
+	border-radius: 0;
 }
 
+#fp-nav ul li:hover a span {
+	width: 8px;
+	height: 8px;
+	margin: 0;
+}
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span{
+	background-color: #ffffff;
+	height: 8px;
+	width: 8px;
+	border-radius: 0;
+	margin: 0;
+	border:1px solid #ffffff;
+}
+  #fp-nav ul li, .fp-slidesNav ul li {
+	width: auto;
+	margin:7px 0;
+  }
+  /* ===============================   lavel */
 .label__tag{
 	left: 60px;
 	bottom: 64px;
