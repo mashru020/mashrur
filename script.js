@@ -69,7 +69,7 @@ document.addEventListener('click', function(e) {
 		navBar.classList.toggle('hide');
 		setTimeout(() => {
 			changeLabel();
-		}, 1);	
+		}, 10);	
 	}	 
 }, false);
 

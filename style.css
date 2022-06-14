@@ -178,9 +178,7 @@ h1{
 .nav{
 	height: 0;
 }
-.nav__wrapper {
-	transition: all .5s ease;
-}
+
 .nav__wrapper.show{
 	height: 100vh;
 	width: 100%;
@@ -189,12 +187,18 @@ h1{
 	top:0;
 	z-index: 100;
 	position: fixed;
+	transform-origin:0px 0px;
 }
 .nav__wrapper.hide{
 	transform: scale(0.01);
 	opacity: 0;
 	transform-origin: 125px 35px;
-	transition-delay: 0s;
+	z-index: 100;
+}
+.nav__wrapper {
+	height: 100vh;
+	width: 100%;
+	transition: all .5s ease;
 }
 .nav__links{
 	width: 	100%;
