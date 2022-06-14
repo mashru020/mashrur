@@ -69,7 +69,7 @@ document.addEventListener('click', function(e) {
 		navBar.classList.toggle('hide');
 		setTimeout(() => {
 			changeLabel();
-		}, 10);	
+		}, 1);	
 	}	 
 }, false);
 
@@ -78,7 +78,9 @@ document.addEventListener('wheel',function(e) {
 });
 
 document.addEventListener('keydown',function(e) {
-	e.preventDefault();
-	changeLabel();
+	console.log(e);
+	setTimeout(() => {
+		changeLabel();
+	}, 1);
 });
 
