@@ -7,7 +7,8 @@
 	navigation: true,
 	navigationPosition: 'left',
 	autoScrolling:true,
-	scrollHorizontally: true
+	scrollHorizontally: true,
+	
 });
 
 // seltect elements
@@ -69,7 +70,7 @@ document.addEventListener('click', function(e) {
 		navBar.classList.toggle('hide');
 		setTimeout(() => {
 			changeLabel();
-		}, 1);	
+		}, 10);	
 	}	 
 }, false);
 
