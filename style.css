@@ -22,7 +22,22 @@ section:nth-child(even){
 .boxbg{
 	background-color: #192633;
 }
-
+#section--1{
+	background: #131d27;
+}
+#section--2{
+	background: tomato;
+}
+#section--3{
+	background: lightseagreen
+}
+#section--4{
+	background: limegreen;
+}
+h1{
+	text-align: center;
+	color:purple;
+}
 /* ============================================    Header  ========================*/
 
 .label__section{
@@ -38,7 +53,7 @@ section:nth-child(even){
 	font-family: 'Calling Code', sans-serif;
 	font-size: 16px;
 	text-transform: lowercase;
-	transform: translate(74px,130px);
+	transform: translate(60px,130px);
 	overflow: hidden;
 	z-index: 100;
 }
@@ -84,9 +99,9 @@ section:nth-child(even){
 
 
 
-/* ======================================================================== */
-/*                            nav button -> star                            */
-/* ======================================================================== */
+/*======================================================================*/
+/*                          nav button->start                           */
+/*======================================================================*/
 .nav__btn{
 	padding: 10px;
 	background-color: transparent;
@@ -95,7 +110,7 @@ section:nth-child(even){
 	outline: 0;
 	z-index: 101;
 	cursor:pointer;
-	transform: translate(64px, 60px);
+	transform: translate(50px, 60px);
 	transition: all .5s ease;
 	position: fixed;
 }
@@ -157,15 +172,13 @@ section:nth-child(even){
 .nav__btn.open:hover .menu-btn::before {
 	background:#ffdb66;
 }
-/* ======================================================================== */
-/*                            nav button -> end                             */
-/* ======================================================================== */
+/*======================================================================*/
+/*                            nav button->end                           */
+/*======================================================================*/
 .nav{
 	height: 0;
 }
-.nav__wrapper {
-	transition: all .5s ease;
-}
+
 .nav__wrapper.show{
 	height: 100vh;
 	width: 100%;
@@ -174,12 +187,19 @@ section:nth-child(even){
 	top:0;
 	z-index: 100;
 	position: fixed;
+	transform-origin:0px 0px;
 }
 .nav__wrapper.hide{
 	transform: scale(0.01);
 	opacity: 0;
 	transform-origin: 125px 35px;
-	transition-delay: 0s;
+	z-index: 100;
+}
+.nav__wrapper {
+	height: 100vh;
+	width: 100%;
+	transition: all .5s ease;
+	background: rgba(0,0,0,0.4);
 }
 .nav__links{
 	width: 	100%;
@@ -236,28 +256,42 @@ section:nth-child(even){
 	color: #07335d;
 	background-color: #ffdb66;
 }
-#fv-dots {
-    left: 0%;
-    padding-left: 130px;
+/* ======================  full Page navigation -> dots  ========================== */
+#fp-nav {
+    left: 60px !important;
 }
-#fv-dots ul li a span{
+#fp-nav ul li a span{
 	display: inline-block;
-	height: 9px;
-	width: 9px;
+	height: 8px;
+	width: 8px;
 	border:1px solid #ffffff;
-	background-color: transparent;
-	transition: none;
+	transition: all .3s ease;
+	border-radius: 0;
+	margin: 0;
 }
-#fv-dots ul li a span:hover{
+#fp-nav ul li a span:hover{
 	background-color: #ffffff;
-}
-#fv-dots ul a.active span{
-	background-color: #ffffff;
-	transform: rotate(0deg);
-	height: 9px;
-	width: 9px;
+	border-radius: 0;
 }
 
+#fp-nav ul li:hover a span {
+	width: 8px;
+	height: 8px;
+	margin: 0;
+}
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span{
+	background-color: #ffffff;
+	height: 8px;
+	width: 8px;
+	border-radius: 0;
+	margin: 0;
+	border:1px solid #ffffff;
+}
+  #fp-nav ul li, .fp-slidesNav ul li {
+	width: auto;
+	margin:7px 0;
+  }
+  /* ===============================   lavel */
 .label__tag{
 	left: 60px;
 	bottom: 64px;

@@ -2,10 +2,14 @@
 
   new fullpage('#fullpage', {
 	//options here
+	menu: '#menu-list',
+	anchors:['home', 'skills', 'services', 'profile'],
+	navigation: true,
+	navigationPosition: 'left',
 	autoScrolling:true,
 	scrollHorizontally: true,
+	
 });
-
 
 // seltect elements
 
@@ -25,10 +29,6 @@ let pagValue;
 const length = allSection.length;
 
 // functions 
-
-const getCurrentSection= () => {
-	return document.querySelector('.section.active');
-}
 const labelStyle = function (val1, val2, val3) {
 	let x = `${val1}px`;
 	let y = `${val2}px`;
@@ -36,30 +36,19 @@ const labelStyle = function (val1, val2, val3) {
 	sectionLabelText.style.width = `${val3*8}px`
 	paginationLabel.style.transform = `translateY(${x})`;
 	sectionLabelText.style.transform = `translateY(${y})`;
-
 }
 
-
- 
-//check last and first section 
-const checkFirstLastSection = () => {
-	const currentSectionTest = getCurrentSection().id;
-	console.log(currentSectionTest);
-	const firstSection = allSection[0].id;
-	const lastSection = allSection[length - 1].id;
-	
-	if (firstSection == currentSectionTest || lastSection == currentSectionTest ){
-		return 0;
-	}
-	else return 1;
+// return active section
+const getCurrentSection= () => {
+	return document.querySelector('.section.active');
 }
 
-// ==============  label change 
-const changeLabel = (e) => {
+// ==============  label change with scroll
+const changeLabel = () => {
 	const currentSection = getCurrentSection();
-	pagValue = currentSection.id[9];
-	
-	sectionLabelValue = currentSection.classList[1];
+	pagValue = currentSection.classList[1][9];
+	sectionLabelValue = currentSection.dataset.anchor;
+
 	labelStyle(-50, -50,sectionLabelValue.length);
 	setTimeout(() => {
 		sectionLabelText.innerHTML = (sectionLabelValue) ;
@@ -67,10 +56,6 @@ const changeLabel = (e) => {
 		labelStyle(0,0, sectionLabelValue.length);
 	}, 1000);
 }
-
-
-
-
 
 // EVENTS
 
@@ -81,32 +66,25 @@ navButton.addEventListener('click',function(e){
 	navButton.classList.toggle('open');
 });
 
-
-
 document.addEventListener('click', function(e) {  
 	if (e.target.classList.contains('nav__link')) {
-		
-		
-		// sectionLabel.innerHTML = (sectionLabelValue) ;
 		navButton.classList.remove('open');
 		navBar.classList.toggle('show');
 		navBar.classList.toggle('hide');
-
-		changeLabel(e);
-		console.log(getCurrentSection());
-	}
-		 
+		setTimeout(() => {
+			changeLabel();
+		}, 10);	
+	}	 
 }, false);
+
 document.addEventListener('wheel',function(e) {
-	changeLabel(e);
-	console.log(checkFirstLastSection());
+	changeLabel();
 });
 
-document.addEventListener('keyup',function(e) {
-	// console.log(e.target);
-	e.preventDefault();
-	changeLabel(e);
-	console.log(checkFirstLastSection());
-	
+document.addEventListener('keydown',function(e) {
+	console.log(e);
+	setTimeout(() => {
+		changeLabel();
+	}, 1);
 });
 
