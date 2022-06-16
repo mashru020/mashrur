@@ -55,6 +55,11 @@ const changeLabel = () => {
 		paginationLabel.innerHTML = (0+pagValue);
 		labelStyle(0,0, sectionLabelValue.length);
 	}, 1000);
+
+	let navItem = currentSection.attributes[2].value;
+	document.querySelector('.nav__link.on').classList.remove('on');
+	document.querySelector(`.nav__item.nav__${navItem} a`).classList.add('on');
+	 
 }
 
 // EVENTS
@@ -82,7 +87,6 @@ document.addEventListener('wheel',function(e) {
 });
 
 document.addEventListener('keydown',function(e) {
-	console.log(e);
 	setTimeout(() => {
 		changeLabel();
 	}, 1);

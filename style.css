@@ -22,18 +22,7 @@ section:nth-child(even){
 .boxbg{
 	background-color: #192633;
 }
-#section--1{
-	background: #131d27;
-}
-#section--2{
-	background: tomato;
-}
-#section--3{
-	background: lightseagreen
-}
-#section--4{
-	background: limegreen;
-}
+
 h1{
 	text-align: center;
 	color:purple;
@@ -228,7 +217,7 @@ h1{
 	color: #07335d;
 	background-color: rgba(255,218,101,.9);
 }
-.nav__link.active{
+.nav__link.on {
 	color: #f15850;
 }
 .language{
