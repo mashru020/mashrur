@@ -304,3 +304,33 @@ h1{
 	z-index: 100;
 	color: white;
 }
+
+
+@media screen and ( max-width: 1300px) {
+	.nav__btn {
+		padding: 10px 10px 10px 0;
+		transform: translate(2rem, 2rem);
+	  }
+	  .label__section {
+		transform: translate(2rem,6rem);
+	  }
+	  #fp-nav {
+		left: 2rem !important;
+	  }
+	  .label__tag {
+		left: 2rem;
+		bottom: 2rem;
+	  }
+	  .logo {
+		top: 1.5rem;
+	  }
+	  .language {
+		top: 2rem;
+		right: 2rem;
+	  }
+	  .label__pagination {
+		height: 4.5rem;
+		width: 4.5rem;
+		padding: 14px;
+	  }
+}
